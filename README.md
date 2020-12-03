@@ -1,2 +1,2 @@
-# webopenless
+# WebOpenLess
 Media compression tool
