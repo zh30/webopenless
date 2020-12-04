@@ -5,12 +5,12 @@
   "repository": "git@github.com:zhanghecool/webopenless.git",
   "author": "He Zhang <zhanghecool@outlook.com>",
   "license": "MIT",
+  "homepage": "https://openless.zhanghe.cool",
   "dependencies": {
     "@ffmpeg/core": "^0.8.5",
     "@ffmpeg/ffmpeg": "^0.9.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-hot-loader": "^4.13.0",
     "rxjs": "^6.6.3"
   },
   "devDependencies": {
@@ -18,14 +18,20 @@
     "@babel/core": "^7.12.9",
     "@babel/preset-env": "^7.12.7",
     "@babel/preset-react": "^7.12.7",
-    "babel-loader": "^8.2.2",
-    "css-loader": "^5.0.1",
-    "style-loader": "^2.0.0",
-    "webpack": "^5.9.0",
-    "webpack-cli": "^4.2.0",
-    "webpack-dev-server": "^3.11.0"
+    "@snowpack/plugin-dotenv": "^2.0.5",
+    "@snowpack/plugin-react-refresh": "^2.3.8",
+    "@snowpack/plugin-typescript": "^1.1.1",
+    "@snowpack/web-test-runner-plugin": "^0.1.5",
+    "@testing-library/react": "^11.2.2",
+    "@web/test-runner": "^0.10.0",
+    "prettier": "^2.2.1",
+    "snowpack": "^2.18.0"
   },
   "scripts": {
-    "dev": "webpack serve --mode development --env development"
+    "dev": "snowpack dev",
+    "build": "snowpack build",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+    "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\"",
+    "test": "web-test-runner \"src/**/*.test.tsx\""
   }
 }
