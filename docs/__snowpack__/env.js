@@ -1,0 +1,1 @@
+export default {"SNOWPACK_PUBLIC_ENABLE_FEATURE":"true","MODE":"production","NODE_ENV":"production","SSR":false};
