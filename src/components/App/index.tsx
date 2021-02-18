@@ -10,7 +10,11 @@ const App = () => {
     progress: ({ ratio }) =>
       setMessage(`Complete: ${(ratio * 100.0).toFixed(2)}%`),
   });
-  const downloadBlobAsFile = function (url, filename, contentType) {
+  const downloadBlobAsFile = function (
+    url: string,
+    filename: string,
+    contentType: string,
+  ) {
     if (!url) {
       console.error(' No data');
       return;
@@ -47,7 +51,9 @@ const App = () => {
     );
     a.dispatchEvent(e);
   };
-  const transcode = async ({ target: { files } }) => {
+  const transcode = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { files } = e.target;
+    if (!files) return;
     const { name } = files[0];
     const outFileName = `openless_${name}.mp4`;
     if (!ffmpeg.isLoaded()) {
