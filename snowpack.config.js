@@ -13,4 +13,8 @@ module.exports = {
     out: 'docs',
     baseUrl: 'https://openless.zhanghe.cool/',
   },
+  packageOptions: {
+    source: 'remote',
+    types: true,
+  },
 };
