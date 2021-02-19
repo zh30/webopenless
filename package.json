@@ -14,10 +14,6 @@
     "rxjs": "^6.6.3"
   },
   "devDependencies": {
-    "@babel/cli": "^7.12.8",
-    "@babel/core": "^7.12.9",
-    "@babel/preset-env": "^7.12.7",
-    "@babel/preset-react": "^7.12.7",
     "@snowpack/plugin-dotenv": "^2.0.5",
     "@snowpack/plugin-react-refresh": "^2.4.0",
     "@snowpack/plugin-typescript": "^1.2.1",
