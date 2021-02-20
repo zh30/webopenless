@@ -1,6 +1,6 @@
 // [snowpack] add styles to the page (skip if no document exists)
 if (typeof document !== 'undefined') {
-  const code = ":root {\n  font-size: 1em;\n  box-sizing: border-box;\n}\n\n*,\n::before,\n::after {\n  box-sizing: inherit;\n}";
+  const code = ":root{box-sizing:border-box}*,:after,:before{box-sizing:inherit}body{margin:0;padding:0}";
 
   const styleEl = document.createElement("style");
   const codeEl = document.createTextNode(code);

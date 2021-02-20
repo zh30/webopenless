@@ -1,6 +1,6 @@
 import { c as createCommonjsModule, a as commonjsGlobal } from '../common/_commonjsHelpers-eb5a497e.js';
 
-var runtime_1 = createCommonjsModule(function (module) {
+createCommonjsModule(function (module) {
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
  *
@@ -731,7 +731,7 @@ var runtime = (function (exports) {
   // as the regeneratorRuntime namespace. Otherwise create a new empty
   // object. Either way, the resulting object will be used to initialize
   // the regeneratorRuntime variable at the top of this file.
-   module.exports 
+  module.exports 
 ));
 
 try {
@@ -841,7 +841,7 @@ var parseProgress = (message, progress) => {
       if (duration === 0 || duration > d) {
         duration = d;
       }
-    } else if (message.startsWith('frame')) {
+    } else if (message.startsWith('frame') || message.startsWith('size')) {
       const ts = message.split('time=')[1].split(' ')[0];
       const t = ts2sec(ts);
       progress({ ratio: t / duration });
@@ -1136,7 +1136,7 @@ void (function(root, factory) {
 });
 
 const name = "@ffmpeg/ffmpeg";
-const version$1 = "0.9.6";
+const version$1 = "0.9.7";
 const description = "FFmpeg WebAssembly version";
 const main = "src/index.js";
 const types = "src/index.d.ts";
