@@ -44,10 +44,10 @@ jobs:
           ls docs
           
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@3.7.1
+        uses: JamesIves/github-pages-deploy-action@4.0.0
         with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: docs # The folder the action should deploy.
-          CLEAN: true
-          CLEAN_EXCLUDE: '["CNAME", ".nojekyll"]'
+          token: ${{ secrets.ACCESS_TOKEN }}
+          branch: gh-pages # The branch the action should deploy to.
+          folder: docs # The folder the action should deploy.
+          clean: true
+          clean-exclude: '["CNAME", ".nojekyll"]'
