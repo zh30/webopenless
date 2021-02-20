@@ -10,12 +10,12 @@ module.exports = {
     '@snowpack/plugin-react-refresh',
     '@snowpack/plugin-dotenv',
     '@snowpack/plugin-typescript',
-    [
-      'snowpack-plugin-wasm-pack',
-      {
-        projectPath: './wasm',
-      },
-    ],
+    // [
+    //   'snowpack-plugin-wasm-pack',
+    //   {
+    //     projectPath: './wasm',
+    //   },
+    // ],
   ],
   buildOptions: {
     out: 'docs',
