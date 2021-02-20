@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { createFFmpeg, fetchFile } from '@ffmpeg/ffmpeg';
-// import './style.css';
+// import init, { greet } from 'wasm';
+import './style.scss';
 
 const App = () => {
   const [message, setMessage] = useState('Click Start to transcode!');
   const ffmpeg = createFFmpeg({
-    // corePath: ''
+    corePath:
+      'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.8.5/dist/ffmpeg-core.js',
     // log: true,
     progress: ({ ratio }) =>
       setMessage(`Complete: ${(ratio * 100.0).toFixed(2)}%`),
@@ -52,6 +54,8 @@ const App = () => {
     a.dispatchEvent(e);
   };
   const transcode = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    // await init();
+    // greet();
     const { files } = e.target;
     if (!files) return;
     const { name } = files[0];

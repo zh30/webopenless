@@ -5,9 +5,17 @@ module.exports = {
     src: '/dist',
   },
   plugins: [
+    '@snowpack/plugin-sass',
+    '@snowpack/plugin-postcss',
     '@snowpack/plugin-react-refresh',
     '@snowpack/plugin-dotenv',
     '@snowpack/plugin-typescript',
+    [
+      'snowpack-plugin-wasm-pack',
+      {
+        projectPath: './wasm',
+      },
+    ],
   ],
   buildOptions: {
     out: 'docs',
